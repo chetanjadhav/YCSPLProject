@@ -2,7 +2,6 @@ package com.chetan.yCSPLProject.activities
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
@@ -18,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-
+        supportActionBar?.hide()
         viewModel = ViewModelProvider(this, LoginVModelFactory()).get(LoginVModel::class.java)
         binding.viewModel = viewModel
 

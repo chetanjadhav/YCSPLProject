@@ -18,7 +18,7 @@ class MapActivity : AppCompatActivity() {
         setContentView(R.layout.activity_map)
 
         val email:String = intent.getStringExtra("email").toString()
-        getSupportActionBar()?.setTitle(email);
+        supportActionBar?.title = email
 
         mapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync {
